@@ -5,7 +5,7 @@ public class ATM {
         Scanner sc = new Scanner(System.in);
         System.out.println("\nWelcome to APNA ATM !!!\n");
 
-        //pin-locking
+        // pin-locking
         int pin = 1234;
         for(int i=2; i>-1; i--){
             System.out.print("Enter your 4-digits PIN: ");
@@ -21,12 +21,12 @@ public class ATM {
             }
         }
 
-        //balance given at start
+        // balance given at start
         double bal = 1000;
     
         while(true){
 
-            //ATM menu
+            // ATM menu
             System.out.println();
             System.out.println("====ATM Menu====");
             System.out.println("1.Check balance");
@@ -39,12 +39,12 @@ public class ATM {
 
             switch (x) {
                 case 1:
-                    //show available balance
+                    // show available balance
                     System.out.println("Balance: " + bal);      
                     System.out.println();
                     break;
                 case 2:
-                    //Deposite amt                                     
+                    // Deposite amt                                     
                     System.out.print("Enter amount: ");       
                     double dep = sc.nextDouble();
                     if(dep < 0){
@@ -56,7 +56,7 @@ public class ATM {
                     System.out.println();
                     break;
                 case 3:
-                    //withdraw amt
+                    // withdraw amt
                     System.out.print("Enter amount: ");
                     double wit = sc.nextDouble();
                     if(wit > bal){
@@ -68,10 +68,10 @@ public class ATM {
                     System.out.println();
                     break;
                 case 4:
-                    //Exit
+                    // Exit
                     System.exit(0);
                 default:
-                    //Invalid user input
+                    // Invalid user input
                     System.out.println("Invalid choice");
             }
         }
